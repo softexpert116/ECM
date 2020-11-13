@@ -9,4 +9,5 @@
 #import <Cocoa/Cocoa.h>
 
 @interface HeadersEditor_ECMController : NSObject
+
 @end

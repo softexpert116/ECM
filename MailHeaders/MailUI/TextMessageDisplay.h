@@ -6,11 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import "MessageTextViewDelegate-Protocol.h"
+//#import "MessageTextViewDelegate-Protocol.h"
 
 @class MCMessage, MessageTextView, NSAttributedString, NSString, NSWindow;
 
-@interface TextMessageDisplay : NSObject <MessageTextViewDelegate>
+@interface TextMessageDisplay : NSObject
 {
     BOOL _showControlCharacters;
     MCMessage *_message;
@@ -26,7 +26,7 @@
 @property(nonatomic) __weak MessageTextView *textView; // @synthesize textView=_textView;
 @property(retain, nonatomic) NSWindow *singleWindow; // @synthesize singleWindow=_singleWindow;
 @property(retain, nonatomic) MCMessage *message; // @synthesize message=_message;
-- (void).cxx_destruct;
+//- (void).cxx_destruct;
 - (void)saveAs:(id)arg1;
 - (void)toggleShowControlCharacters:(id)arg1;
 - (void)showPrintPanel:(id)arg1;

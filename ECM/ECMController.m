@@ -10,10 +10,12 @@
 #import <objc/objc-runtime.h>
 #import "MVMailBundle.h"
 #import "CodeInjector.h"
+#import "Constants.h"
 
 int LoggingLevel = 0;
 
 @implementation ECMController
+static NSUserDefaults* userDefaults;
 
 + (void)initialize
 {
@@ -30,11 +32,21 @@ int LoggingLevel = 0;
     #pragma GCC diagnostic pop
     
     [self sharedInstance];
+    userDefaults = [NSUserDefaults standardUserDefaults];
     [[((MVMailBundle *)self) class] registerBundle];
 }
-
+-(void)initializeUserDefaults {
+    if ([userDefaults objectForKey:time_text1] == nil) {
+        [userDefaults setValue:@"" forKey:time_text1];
+    }
+    if ([userDefaults objectForKey:time_text2] == nil) {
+        [userDefaults setValue:@"" forKey:time_text2];
+    }
+}
 //
 // -----------------------------------------------------------------------------
++ (NSUserDefaults*) userDefaults { return [NSUserDefaults standardUserDefaults]; }
+
 + (instancetype)sharedInstance
 {
     static dispatch_once_t onceToken;
@@ -60,9 +72,9 @@ int LoggingLevel = 0;
     NSOperatingSystemVersion requiredVersion = {10,11,0};
     return [info isOperatingSystemAtLeastVersion:requiredVersion];
 }
-+ (void) showAlert: (NSString *)msg
++ (void) showAlertWithTitle: (NSString *)title Message: (NSString *)msg
 {
-    NSAlert *alert = [NSAlert alertWithMessageText:msg defaultButton:@"Ok" alternateButton:@"Cancel" otherButton:nil informativeTextWithFormat:@"Alert pop up displayed"];
+    NSAlert *alert = [NSAlert alertWithMessageText:title defaultButton:@"Ok" alternateButton:nil otherButton:nil informativeTextWithFormat:msg];
     [alert runModal];
 }
 //
@@ -80,10 +92,9 @@ int LoggingLevel = 0;
 }
 
 - (void)openECM {
-    
     _windowController = [[ECMWindowController alloc] initWithWindowNibName:@"ECMWindowController"];
-    
-    [_windowController showWindow:self];
+//    [_windowController showWindow:self];
+    [NSApp runModalForWindow:[_windowController window]];
 }
 - (void)initMenu {
     NSApplication *application = [NSApplication sharedApplication];
@@ -102,6 +113,26 @@ int LoggingLevel = 0;
     [subMenu addItem:closeItem];
 
     [theMenu setSubmenu:subMenu forItem:subGroup];
+}
++ (NSString *) selectRandomStringFromArray:(NSArray *)array {
+    NSUInteger myCount = [array count];
+    if (myCount)
+        return [array objectAtIndex:arc4random_uniform(myCount)];
+    else
+        return nil;
+}
++ (BOOL) compareHour1:(NSString *)h1 Minute1:(NSString *)m1 Hour2:(NSString*)h2 Minute2:(NSString*)m2 {
+    if (h1.intValue > h2.intValue) {
+        return YES;
+    } else if (h1.intValue == h2.intValue) {
+        if (m1.intValue >= m2.intValue) {
+            return YES;
+        } else {
+            return NO;
+        }
+    } else {
+        return NO;
+    }
 }
 
 

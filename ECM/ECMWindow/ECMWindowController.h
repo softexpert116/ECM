@@ -10,7 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ECMWindowController : NSWindowController
+@interface ECMWindowController : NSWindowController {
+    __weak IBOutlet NSButton *btn_autoGreet;
+    __weak IBOutlet NSTextField *text_custom;
+    __weak IBOutlet NSTextField *text_random;
+    __weak IBOutlet NSButton *btn_custom;
+    __weak IBOutlet NSButton *btn_random;
+    __weak IBOutlet NSButton *btn_time;
+    __weak IBOutlet NSTextField *text_time;
+    __weak IBOutlet NSTextField *text_preview;
+}
 
 @end
 

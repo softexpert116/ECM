@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface ComposeBackEnd_ECMController : NSObject
-- (id)MPP_newOutgoingMessageUsingWriter:(id)writer contents:(id)contents headers:(id)headers isDraft:(BOOL)isDraft;
+//- (id)MPP_newOutgoingMessageUsingWriter:(id)writer contents:(id)contents headers:(id)headers isDraft:(BOOL)isDraft;
 @end

@@ -10,14 +10,17 @@
 //#import <Cocoa/Cocoa.h>
 #import "ECMWindowController.h"
 
-//NS_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 @interface ECMController : NSObject
 @property (strong, nonatomic) ECMWindowController *windowController;
-+ (void)showAlert:(NSString *)msg;
++ (NSUserDefaults *) userDefaults;
++ (void) showAlertWithTitle: (NSString *)title Message: (NSString *)msg;
 + (BOOL)isElCapitan;
 + (NSString *) extractEmailAddress:(NSString *)address;
++ (NSString *) selectRandomStringFromArray:(NSArray *)array;
++ (BOOL) compareHour1:(NSString *)h1 Minute1:(NSString *)m1 Hour2:(NSString*)h2 Minute2:(NSString*)m2;
 @end
 
 
-//NS_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

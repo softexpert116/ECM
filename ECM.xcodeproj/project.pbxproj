@@ -11,14 +11,14 @@
 		7D0100062547C681005EDCE1 /* ECMWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D0100042547C681005EDCE1 /* ECMWindowController.xib */; };
 		7D01FFF82547ADAB005EDCE1 /* ECMController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D01FFF72547ADAB005EDCE1 /* ECMController.m */; };
 		7D01FFFA2547AE50005EDCE1 /* ECM.mailbundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7D01FFED2547ACFA005EDCE1 /* ECM.mailbundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7D4F4902254AE21600A22421 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F4901254AE21600A22421 /* Constants.m */; };
+		7D989F102558E72400E2CCBA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7D989F0F2558E72400E2CCBA /* Podfile */; };
 		7DB390CE25498C6F00A8A3A3 /* JRLPSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB390C725498C6E00A8A3A3 /* JRLPSwizzle.m */; };
 		7DB390CF25498C6F00A8A3A3 /* CCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB390CA25498C6F00A8A3A3 /* CCLog.m */; };
 		7DB390D025498C6F00A8A3A3 /* CodeInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB390CB25498C6F00A8A3A3 /* CodeInjector.m */; };
-		7DB3932D2549AA5A00A8A3A3 /* ComposeBackEnd+ECMController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB3932B2549AA5A00A8A3A3 /* ComposeBackEnd+ECMController.m */; };
 		7DB3932E2549AA5A00A8A3A3 /* HeadersEditor+ECMController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB3932C2549AA5A00A8A3A3 /* HeadersEditor+ECMController.m */; };
-		7DB395DF2549ABAE00A8A3A3 /* MFSMTPConnection+ECMController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB395DA2549ABAE00A8A3A3 /* MFSMTPConnection+ECMController.m */; };
-		7DB395E02549ABAE00A8A3A3 /* MFSMTPDeliverer+ECMController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB395DB2549ABAE00A8A3A3 /* MFSMTPDeliverer+ECMController.m */; };
-		7DB395E12549ABAE00A8A3A3 /* NSObject+LPDynamicIvars.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB395DC2549ABAE00A8A3A3 /* NSObject+LPDynamicIvars.m */; };
+		7DB39AE8254A42F100A8A3A3 /* TimeSettingModalWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB39AE6254A42F100A8A3A3 /* TimeSettingModalWindow.m */; };
+		7DB39AE9254A42F100A8A3A3 /* TimeSettingModalWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DB39AE7254A42F100A8A3A3 /* TimeSettingModalWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +42,9 @@
 		7D01FFF02547ACFB005EDCE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D01FFF62547ADAB005EDCE1 /* ECMController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECMController.h; sourceTree = "<group>"; };
 		7D01FFF72547ADAB005EDCE1 /* ECMController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECMController.m; sourceTree = "<group>"; };
+		7D4F4900254AE1BD00A22421 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		7D4F4901254AE21600A22421 /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		7D989F0F2558E72400E2CCBA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7DB390C525498B9600A8A3A3 /* MVMailBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVMailBundle.h; sourceTree = "<group>"; };
 		7DB390C725498C6E00A8A3A3 /* JRLPSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRLPSwizzle.m; sourceTree = "<group>"; };
 		7DB390C825498C6E00A8A3A3 /* CCLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLog.h; sourceTree = "<group>"; };
@@ -50,16 +53,8 @@
 		7DB390CB25498C6F00A8A3A3 /* CodeInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeInjector.m; sourceTree = "<group>"; };
 		7DB390CC25498C6F00A8A3A3 /* CodeInjector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeInjector.h; sourceTree = "<group>"; };
 		7DB390CD25498C6F00A8A3A3 /* JRLPSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRLPSwizzle.h; sourceTree = "<group>"; };
-		7DB393292549AA5A00A8A3A3 /* ComposeBackEnd+ECMController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ComposeBackEnd+ECMController.h"; sourceTree = "<group>"; };
 		7DB3932A2549AA5A00A8A3A3 /* HeadersEditor+ECMController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HeadersEditor+ECMController.h"; sourceTree = "<group>"; };
-		7DB3932B2549AA5A00A8A3A3 /* ComposeBackEnd+ECMController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ComposeBackEnd+ECMController.m"; sourceTree = "<group>"; };
 		7DB3932C2549AA5A00A8A3A3 /* HeadersEditor+ECMController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HeadersEditor+ECMController.m"; sourceTree = "<group>"; };
-		7DB395D92549ABAE00A8A3A3 /* MFSMTPConnection+ECMController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MFSMTPConnection+ECMController.h"; sourceTree = "<group>"; };
-		7DB395DA2549ABAE00A8A3A3 /* MFSMTPConnection+ECMController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MFSMTPConnection+ECMController.m"; sourceTree = "<group>"; };
-		7DB395DB2549ABAE00A8A3A3 /* MFSMTPDeliverer+ECMController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MFSMTPDeliverer+ECMController.m"; sourceTree = "<group>"; };
-		7DB395DC2549ABAE00A8A3A3 /* NSObject+LPDynamicIvars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LPDynamicIvars.m"; sourceTree = "<group>"; };
-		7DB395DD2549ABAE00A8A3A3 /* NSObject+LPDynamicIvars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LPDynamicIvars.h"; sourceTree = "<group>"; };
-		7DB395DE2549ABAE00A8A3A3 /* MFSMTPDeliverer+ECMController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MFSMTPDeliverer+ECMController.h"; sourceTree = "<group>"; };
 		7DB395E42549AD7D00A8A3A3 /* NSPasteboardReading-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPasteboardReading-Protocol.h"; sourceTree = "<group>"; };
 		7DB395E52549AD7D00A8A3A3 /* QLSeamlessCloserDelegate-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QLSeamlessCloserDelegate-Protocol.h"; sourceTree = "<group>"; };
 		7DB395E62549AD7D00A8A3A3 /* QLPreviewItem-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QLPreviewItem-Protocol.h"; sourceTree = "<group>"; };
@@ -1336,6 +1331,9 @@
 		7DB39AE12549AD8100A8A3A3 /* MFMessageChangeManager_macOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFMessageChangeManager_macOS.h; sourceTree = "<group>"; };
 		7DB39AE22549AD8100A8A3A3 /* MFEWSSuppressReadReceiptsRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFEWSSuppressReadReceiptsRequestOperation.h; sourceTree = "<group>"; };
 		7DB39AE32549AD8100A8A3A3 /* MFUIMailbox-Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MFUIMailbox-Protocol.h"; sourceTree = "<group>"; };
+		7DB39AE5254A42F100A8A3A3 /* TimeSettingModalWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeSettingModalWindow.h; sourceTree = "<group>"; };
+		7DB39AE6254A42F100A8A3A3 /* TimeSettingModalWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeSettingModalWindow.m; sourceTree = "<group>"; };
+		7DB39AE7254A42F100A8A3A3 /* TimeSettingModalWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeSettingModalWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1352,6 +1350,7 @@
 		7D0100012547C65E005EDCE1 /* ECMWindow */ = {
 			isa = PBXGroup;
 			children = (
+				7DB39AE4254A42B700A8A3A3 /* TimeSettingModal */,
 				7D0100022547C681005EDCE1 /* ECMWindowController.h */,
 				7D0100032547C681005EDCE1 /* ECMWindowController.m */,
 				7D0100042547C681005EDCE1 /* ECMWindowController.xib */,
@@ -1362,6 +1361,7 @@
 		7D01FFE42547ACFA005EDCE1 = {
 			isa = PBXGroup;
 			children = (
+				7D989F0F2558E72400E2CCBA /* Podfile */,
 				7DB395E22549AD7D00A8A3A3 /* MailHeaders */,
 				7D01FFEF2547ACFA005EDCE1 /* ECM */,
 				7D01FFEE2547ACFA005EDCE1 /* Products */,
@@ -1386,6 +1386,8 @@
 				7D01FFF62547ADAB005EDCE1 /* ECMController.h */,
 				7D01FFF72547ADAB005EDCE1 /* ECMController.m */,
 				7DB390C525498B9600A8A3A3 /* MVMailBundle.h */,
+				7D4F4900254AE1BD00A22421 /* Constants.h */,
+				7D4F4901254AE21600A22421 /* Constants.m */,
 			);
 			path = ECM;
 			sourceTree = "<group>";
@@ -1393,12 +1395,6 @@
 		7DB390C625498C4900A8A3A3 /* CodeInject */ = {
 			isa = PBXGroup;
 			children = (
-				7DB395D92549ABAE00A8A3A3 /* MFSMTPConnection+ECMController.h */,
-				7DB395DA2549ABAE00A8A3A3 /* MFSMTPConnection+ECMController.m */,
-				7DB395DE2549ABAE00A8A3A3 /* MFSMTPDeliverer+ECMController.h */,
-				7DB395DB2549ABAE00A8A3A3 /* MFSMTPDeliverer+ECMController.m */,
-				7DB395DD2549ABAE00A8A3A3 /* NSObject+LPDynamicIvars.h */,
-				7DB395DC2549ABAE00A8A3A3 /* NSObject+LPDynamicIvars.m */,
 				7DB390C825498C6E00A8A3A3 /* CCLog.h */,
 				7DB390CA25498C6F00A8A3A3 /* CCLog.m */,
 				7DB390CC25498C6F00A8A3A3 /* CodeInjector.h */,
@@ -1413,8 +1409,6 @@
 		7DB393282549AA2E00A8A3A3 /* Hook */ = {
 			isa = PBXGroup;
 			children = (
-				7DB393292549AA5A00A8A3A3 /* ComposeBackEnd+ECMController.h */,
-				7DB3932B2549AA5A00A8A3A3 /* ComposeBackEnd+ECMController.m */,
 				7DB3932A2549AA5A00A8A3A3 /* HeadersEditor+ECMController.h */,
 				7DB3932C2549AA5A00A8A3A3 /* HeadersEditor+ECMController.m */,
 			);
@@ -2744,6 +2738,16 @@
 			path = MailFW;
 			sourceTree = "<group>";
 		};
+		7DB39AE4254A42B700A8A3A3 /* TimeSettingModal */ = {
+			isa = PBXGroup;
+			children = (
+				7DB39AE5254A42F100A8A3A3 /* TimeSettingModalWindow.h */,
+				7DB39AE6254A42F100A8A3A3 /* TimeSettingModalWindow.m */,
+				7DB39AE7254A42F100A8A3A3 /* TimeSettingModalWindow.xib */,
+			);
+			path = TimeSettingModal;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2802,7 +2806,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D989F102558E72400E2CCBA /* Podfile in Resources */,
 				7D0100062547C681005EDCE1 /* ECMWindowController.xib in Resources */,
+				7DB39AE9254A42F100A8A3A3 /* TimeSettingModalWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2813,16 +2819,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DB395E02549ABAE00A8A3A3 /* MFSMTPDeliverer+ECMController.m in Sources */,
-				7DB3932D2549AA5A00A8A3A3 /* ComposeBackEnd+ECMController.m in Sources */,
+				7DB39AE8254A42F100A8A3A3 /* TimeSettingModalWindow.m in Sources */,
 				7DB390D025498C6F00A8A3A3 /* CodeInjector.m in Sources */,
 				7DB390CE25498C6F00A8A3A3 /* JRLPSwizzle.m in Sources */,
 				7DB3932E2549AA5A00A8A3A3 /* HeadersEditor+ECMController.m in Sources */,
 				7D0100052547C681005EDCE1 /* ECMWindowController.m in Sources */,
 				7DB390CF25498C6F00A8A3A3 /* CCLog.m in Sources */,
-				7DB395E12549ABAE00A8A3A3 /* NSObject+LPDynamicIvars.m in Sources */,
 				7D01FFF82547ADAB005EDCE1 /* ECMController.m in Sources */,
-				7DB395DF2549ABAE00A8A3A3 /* MFSMTPConnection+ECMController.m in Sources */,
+				7D4F4902254AE21600A22421 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2879,11 +2883,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "${HOME}/Library/Mail/Bundles/";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
+				SYMROOT = "${HOME}/Library/Mail/Bundles/";
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -2931,10 +2938,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "${HOME}/Library/Mail/Bundles/";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
+				SYMROOT = "${HOME}/Library/Mail/Bundles/";
+				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
@@ -2943,13 +2954,21 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/CodeInject/ECMPlugin.pch";
 				INFOPLIST_FILE = ECM/Info.plist;
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Mail/Bundles";
+				INSTALL_PATH = "${HOME}/Library/Mail/Bundles/";
+				ONLY_ACTIVE_ARCH = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ios.ECM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SYMROOT = "${HOME}/Library/Mail/Bundles/";
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = mailbundle;
 			};
 			name = Debug;
@@ -2959,13 +2978,21 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/CodeInject/ECMPlugin.pch";
 				INFOPLIST_FILE = ECM/Info.plist;
-				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Mail/Bundles";
+				INSTALL_PATH = "${HOME}/Library/Mail/Bundles/";
+				ONLY_ACTIVE_ARCH = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = ios.ECM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SYMROOT = "${HOME}/Library/Mail/Bundles/";
+				VALID_ARCHS = "i386 x86_64";
 				WRAPPER_EXTENSION = mailbundle;
 			};
 			name = Release;

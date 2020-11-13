@@ -3,12 +3,12 @@
 //
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
-
-#import "NSObject-Protocol.h"
-
+//#import <Foundation/Foundation.h>
+//#import "NSObject-Protocol.h"
+//#import <AppKit/AppKit.h>
 @class NSNotification, NSText;
 
-@protocol NSTextDelegate <NSObject>
+@protocol NSTextDelegate
 
 @optional
 - (void)textDidChange:(NSNotification *)arg1;
