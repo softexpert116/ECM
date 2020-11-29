@@ -7,6 +7,12 @@
 extern void instrumentObjcMessageSends(BOOL enabled);
 extern int  LoggingLevel;
 
+#define GET_DEFAULT(k) [[NSUserDefaults standardUserDefaults] objectForKey: k]
+#define SET_USER_DEFAULT(o,k) [[NSUserDefaults standardUserDefaults] setObject: o forKey: k]
+#define ECMLocaleIdentifier [ECMController localeIdentifier]
+//#define MHLocalizedString(k) [MailHeader localizedString: k]
+#define ECMLocalizedStringByLocale(k,l) [ECMController localizedString: k localeIdentifier: l]
+
 #define DebugLog(...) if (LoggingLevel) {CCLog(__VA_ARGS__);}
 #define GMLocalizedString(key) \
 [GPGMailBundle localizedStringForKey:(key)]

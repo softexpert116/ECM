@@ -7,6 +7,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TimeSettingModalWindow">
             <connections>
+                <outlet property="btn_apply" destination="Qhl-Pz-bxD" id="h9f-27-duq"/>
+                <outlet property="btn_close" destination="sGn-cn-Vjb" id="NQQ-e8-Vus"/>
                 <outlet property="text1" destination="WvE-Cz-bOZ" id="b6I-PR-Tdm"/>
                 <outlet property="text2" destination="DIx-PD-aql" id="aa5-xp-sxO"/>
                 <outlet property="text3" destination="f8Y-xd-Tnp" id="iOC-YS-20B"/>
@@ -25,7 +27,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="442" height="282"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1714" height="901"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1718" height="905"/>
             <view key="contentView" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="442" height="282"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -94,7 +96,7 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qhl-Pz-bxD">
-                        <rect key="frame" x="337" y="178" width="63" height="21"/>
+                        <rect key="frame" x="301" y="178" width="114" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="bevel" title="Apply" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="LZ5-Mp-OJg">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -102,17 +104,6 @@
                         </buttonCell>
                         <connections>
                             <action selector="clickApply:" target="-2" id="HLz-8f-w4c"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sGn-cn-Vjb">
-                        <rect key="frame" x="337" y="130" width="63" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="bevel" title="Cancel" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="mZq-Fx-RoP">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="clickCancel:" target="-2" id="ujl-Yh-gaj"/>
                         </connections>
                     </button>
                     <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="64v-cs-Qar">
@@ -178,6 +169,17 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sGn-cn-Vjb">
+                        <rect key="frame" x="310" y="130" width="96" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="bevel" title="Close" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="mZq-Fx-RoP">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="clickCancel:" target="-2" id="ujl-Yh-gaj"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <connections>

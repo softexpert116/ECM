@@ -99,53 +99,59 @@ id document;
     }
     
     if (originalEmail != nil) {
-        if ([ECMController.userDefaults boolForKey:auto_greet] == YES) {
+        if ([ECMController.userDefaults boolForKey:key_auto_greet] == YES) {
             
-            if ([ECMController.userDefaults objectForKey:format_type] != nil) {
-                NSString *formatType = [ECMController.userDefaults objectForKey:format_type];
-                if ([formatType isEqual: @"Custom"]) {
-                    if ([ECMController.userDefaults objectForKey:custom_text] != nil) {
-                        greetStr = [ECMController.userDefaults objectForKey:custom_text];
+            if ([ECMController.userDefaults objectForKey:key_format_type] != nil) {
+                NSInteger formatType = [ECMController.userDefaults integerForKey:key_format_type];
+                
+                if (formatType == 0) {
+                    if ([ECMController.userDefaults objectForKey:key_custom_text] != nil) {
+                        NSDictionary* dict = [ECMController.userDefaults objectForKey:key_custom_text];
+                        greetStr = [dict valueForKey:GET_DEFAULT(ECMLanguageCode)];
                     }
-                } else if ([formatType  isEqual: @"Random"]) {
-                    if ([ECMController.userDefaults objectForKey:random_text] != nil) {
-                        NSString* randStr = [ECMController.userDefaults objectForKey:random_text];
+                } else if (formatType == 1) {
+                    if ([ECMController.userDefaults objectForKey:key_random_text] != nil) {
+                        NSDictionary* dict = [ECMController.userDefaults objectForKey:key_random_text];
+                        NSString* randStr = [dict valueForKey:GET_DEFAULT(ECMLanguageCode)];
                         if (randStr.length > 0) {
                             NSArray *stringArray = [randStr componentsSeparatedByString: @","];
                             greetStr = [ECMController selectRandomStringFromArray:stringArray];
                         }
                     }
-                } else if ([formatType  isEqual: @"Time"]) {
+                } else if  (formatType == 2) {
                     NSDate *time11, *time12, *time21, *time22, *time31, *time32;
                     NSString* timeStr1, *timeStr2, *timeStr3;
-                    if ([ECMController.userDefaults objectForKey:time_val11] != nil) {
-                        time11 = [ECMController.userDefaults objectForKey:time_val11];
+                    if ([ECMController.userDefaults objectForKey:key_time_val11] != nil) {
+                        time11 = [ECMController.userDefaults objectForKey:key_time_val11];
                     }
-                    if ([ECMController.userDefaults objectForKey:time_val12] != nil) {
-                        time12 = [ECMController.userDefaults objectForKey:time_val12];
+                    if ([ECMController.userDefaults objectForKey:key_time_val12] != nil) {
+                        time12 = [ECMController.userDefaults objectForKey:key_time_val12];
                     }
-                    if ([ECMController.userDefaults objectForKey:time_text1] != nil) {
-                        timeStr1 = [ECMController.userDefaults objectForKey:time_text1];
-                    }
-
-                    if ([ECMController.userDefaults objectForKey:time_val21] != nil) {
-                        time21 = [ECMController.userDefaults objectForKey:time_val21];
-                    }
-                    if ([ECMController.userDefaults objectForKey:time_val22] != nil) {
-                        time22 = [ECMController.userDefaults objectForKey:time_val22];
-                    }
-                    if ([ECMController.userDefaults objectForKey:time_text2] != nil) {
-                        timeStr2 = [ECMController.userDefaults objectForKey:time_text2];
+                    if ([ECMController.userDefaults objectForKey:key_time_text1] != nil) {
+                        NSDictionary* dict = [ECMController.userDefaults objectForKey:key_time_text1];
+                        timeStr1 = [dict valueForKey:GET_DEFAULT(ECMLanguageCode)];
                     }
 
-                    if ([ECMController.userDefaults objectForKey:time_val31] != nil) {
-                        time31 = [ECMController.userDefaults objectForKey:time_val31];
+                    if ([ECMController.userDefaults objectForKey:key_time_val21] != nil) {
+                        time21 = [ECMController.userDefaults objectForKey:key_time_val21];
                     }
-                    if ([ECMController.userDefaults objectForKey:time_val32] != nil) {
-                        time32 = [ECMController.userDefaults objectForKey:time_val32];
+                    if ([ECMController.userDefaults objectForKey:key_time_val22] != nil) {
+                        time22 = [ECMController.userDefaults objectForKey:key_time_val22];
                     }
-                    if ([ECMController.userDefaults objectForKey:time_text3] != nil) {
-                        timeStr3 = [ECMController.userDefaults objectForKey:time_text3];
+                    if ([ECMController.userDefaults objectForKey:key_time_text2] != nil) {
+                        NSDictionary* dict = [ECMController.userDefaults objectForKey:key_time_text2];
+                        timeStr2 = [dict valueForKey:GET_DEFAULT(ECMLanguageCode)];
+                    }
+
+                    if ([ECMController.userDefaults objectForKey:key_time_val31] != nil) {
+                        time31 = [ECMController.userDefaults objectForKey:key_time_val31];
+                    }
+                    if ([ECMController.userDefaults objectForKey:key_time_val32] != nil) {
+                        time32 = [ECMController.userDefaults objectForKey:key_time_val32];
+                    }
+                    if ([ECMController.userDefaults objectForKey:key_time_text3] != nil) {
+                        NSDictionary* dict = [ECMController.userDefaults objectForKey:key_time_text3];
+                        timeStr3 = [dict valueForKey:GET_DEFAULT(ECMLanguageCode)];
                     }
                     
                     if (time11 != nil) {
@@ -156,20 +162,20 @@ id document;
                         NSDate* curDate = [NSDate date];
                         NSString *string_H = [formatter_H stringFromDate:curDate];
                         NSString *string_m = [formatter_m stringFromDate:curDate];
-
+                        
                         if ([ECMController compareHour1:string_H Minute1:string_m Hour2:[formatter_H stringFromDate:time11] Minute2:[formatter_H stringFromDate:time11]] && ![ECMController compareHour1:string_H Minute1:string_m Hour2:[formatter_H stringFromDate:time12] Minute2:[formatter_H stringFromDate:time12]]) {
-                            greetStr = [ECMController.userDefaults objectForKey:time_text1];
+                            greetStr = timeStr1;
                         } else if ([ECMController compareHour1:string_H Minute1:string_m Hour2:[formatter_H stringFromDate:time21] Minute2:[formatter_H stringFromDate:time21]] && ![ECMController compareHour1:string_H Minute1:string_m Hour2:[formatter_H stringFromDate:time22] Minute2:[formatter_H stringFromDate:time22]]) {
-                            greetStr = [ECMController.userDefaults objectForKey:time_text2];
-                        } else if ([ECMController compareHour1:string_H Minute1:string_m Hour2:[formatter_H stringFromDate:time31] Minute2:[formatter_H stringFromDate:time31]] && ![ECMController compareHour1:string_H Minute1:string_m Hour2:[formatter_H stringFromDate:time32] Minute2:[formatter_H stringFromDate:time32]]) {
-                            greetStr = [ECMController.userDefaults objectForKey:time_text3];
+                            greetStr = timeStr2;
+                        } else { //if ([ECMController compareHour1:string_H Minute1:string_m Hour2:[formatter_H stringFromDate:time31] Minute2:[formatter_H stringFromDate:time31]] && ![ECMController compareHour1:string_H Minute1:string_m Hour2:[formatter_H stringFromDate:time32] Minute2:[formatter_H stringFromDate:time32]]) {
+                            greetStr = timeStr3;
                         }
                     }
                 }
             }
             NSString* firstName = [self getFirstNameFromAlias:alias];
-            
-            
+//            NSString* lastName = [self getLastNameFromAlias:alias];
+//            [ECMController showAlertWithTitle:@"" Message:greetStr];
             
             [self getGenderFromUrl:@"https://my.mail-buddy.de/APIPanel/getGender/" firstName:firstName];
         }
@@ -179,10 +185,13 @@ id document;
 }
 -(void)setECMReply {
     NSString* replyStr = @"<p>";
+    NSString* mr = [ECMController localizedString:@"STRING_mr" localeIdentifier:GET_DEFAULT(ECMLanguageCode)];
+    NSString* mrs = [ECMController localizedString:@"STRING_mrs" localeIdentifier:GET_DEFAULT(ECMLanguageCode)];
+
     if ([genderStr isEqualToString:@"Male"]) {
-        replyStr = [replyStr stringByAppendingFormat:@"%@ Mr. ", greetStr];
+        replyStr = [replyStr stringByAppendingFormat:@"%@ %@ ", greetStr, mr];
     } else {
-        replyStr = [replyStr stringByAppendingFormat:@"%@ Mrs. ", greetStr];
+        replyStr = [replyStr stringByAppendingFormat:@"%@ %@ ", greetStr, mrs];
     }
     
     replyStr = [replyStr stringByAppendingFormat:@"%@", [self getLastNameFromAlias:alias]];
@@ -265,8 +274,10 @@ id document;
 -(NSString*)getLastNameFromAlias:(NSString*)alias {
     NSArray *stringArray = [alias componentsSeparatedByString: @" "];
     if (stringArray != nil) {
-        if ([stringArray count] > 0) {
-            return [stringArray objectAtIndex:[stringArray count]-1];
+        if ([stringArray count] > 1) {
+            return [stringArray objectAtIndex:[stringArray count]-2];
+        } else {
+            return alias;
         }
     }
     return nil;

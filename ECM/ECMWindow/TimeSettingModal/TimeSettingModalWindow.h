@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
     __weak IBOutlet NSTextField *text1;
     __weak IBOutlet NSTextField *text2;
     __weak IBOutlet NSTextField *text3;
+    __weak IBOutlet NSButton *btn_apply;
+    __weak IBOutlet NSButton *btn_close;
 }
 
 @end

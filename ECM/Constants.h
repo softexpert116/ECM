@@ -8,18 +8,21 @@
 
 #ifndef Constants_h
 #define Constants_h
+#define ECMLanguageCode @"ECMLanguageCode"
+#define ECMBundleIdentifier @"ECMBundleIdentifier"
+#define ECMBundleShortVersionKey @"CFBundleShortVersionString"
 
-FOUNDATION_EXPORT NSString *const time_text1;
-FOUNDATION_EXPORT NSString *const time_val11;
-FOUNDATION_EXPORT NSString *const time_val12;
-FOUNDATION_EXPORT NSString *const time_text2;
-FOUNDATION_EXPORT NSString *const time_val21;
-FOUNDATION_EXPORT NSString *const time_val22;
-FOUNDATION_EXPORT NSString *const time_text3;
-FOUNDATION_EXPORT NSString *const time_val31;
-FOUNDATION_EXPORT NSString *const time_val32;
-FOUNDATION_EXPORT NSString *const format_type;
-FOUNDATION_EXPORT NSString *const custom_text;
-FOUNDATION_EXPORT NSString *const random_text;
-FOUNDATION_EXPORT NSString *const auto_greet;
+FOUNDATION_EXPORT NSString *const key_time_text1;
+FOUNDATION_EXPORT NSString *const key_time_val11;
+FOUNDATION_EXPORT NSString *const key_time_val12;
+FOUNDATION_EXPORT NSString *const key_time_text2;
+FOUNDATION_EXPORT NSString *const key_time_val21;
+FOUNDATION_EXPORT NSString *const key_time_val22;
+FOUNDATION_EXPORT NSString *const key_time_text3;
+FOUNDATION_EXPORT NSString *const key_time_val31;
+FOUNDATION_EXPORT NSString *const key_time_val32;
+FOUNDATION_EXPORT NSString *const key_format_type;
+FOUNDATION_EXPORT NSString *const key_custom_text;
+FOUNDATION_EXPORT NSString *const key_random_text;
+FOUNDATION_EXPORT NSString *const key_auto_greet;
 #endif /* Constants_h */

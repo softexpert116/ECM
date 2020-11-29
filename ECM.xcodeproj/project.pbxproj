@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7D0100052547C681005EDCE1 /* ECMWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0100032547C681005EDCE1 /* ECMWindowController.m */; };
-		7D0100062547C681005EDCE1 /* ECMWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D0100042547C681005EDCE1 /* ECMWindowController.xib */; };
 		7D01FFF82547ADAB005EDCE1 /* ECMController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D01FFF72547ADAB005EDCE1 /* ECMController.m */; };
 		7D01FFFA2547AE50005EDCE1 /* ECM.mailbundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7D01FFED2547ACFA005EDCE1 /* ECM.mailbundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7D4F4902254AE21600A22421 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4F4901254AE21600A22421 /* Constants.m */; };
@@ -19,6 +18,8 @@
 		7DB3932E2549AA5A00A8A3A3 /* HeadersEditor+ECMController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB3932C2549AA5A00A8A3A3 /* HeadersEditor+ECMController.m */; };
 		7DB39AE8254A42F100A8A3A3 /* TimeSettingModalWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB39AE6254A42F100A8A3A3 /* TimeSettingModalWindow.m */; };
 		7DB39AE9254A42F100A8A3A3 /* TimeSettingModalWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DB39AE7254A42F100A8A3A3 /* TimeSettingModalWindow.xib */; };
+		7DD017372564B29600C86BE1 /* ECMWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD017392564B29600C86BE1 /* ECMWindowController.xib */; };
+		7DD0173B2564B56500C86BE1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7DD0173D2564B56500C86BE1 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		7D0100022547C681005EDCE1 /* ECMWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECMWindowController.h; sourceTree = "<group>"; };
 		7D0100032547C681005EDCE1 /* ECMWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECMWindowController.m; sourceTree = "<group>"; };
-		7D0100042547C681005EDCE1 /* ECMWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ECMWindowController.xib; sourceTree = "<group>"; };
 		7D01FFED2547ACFA005EDCE1 /* ECM.mailbundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECM.mailbundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D01FFF02547ACFB005EDCE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D01FFF62547ADAB005EDCE1 /* ECMController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECMController.h; sourceTree = "<group>"; };
@@ -1334,6 +1334,20 @@
 		7DB39AE5254A42F100A8A3A3 /* TimeSettingModalWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeSettingModalWindow.h; sourceTree = "<group>"; };
 		7DB39AE6254A42F100A8A3A3 /* TimeSettingModalWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeSettingModalWindow.m; sourceTree = "<group>"; };
 		7DB39AE7254A42F100A8A3A3 /* TimeSettingModalWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeSettingModalWindow.xib; sourceTree = "<group>"; };
+		7DD017382564B29600C86BE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ECMWindowController.xib; sourceTree = "<group>"; };
+		7DD0173A2564B2AC00C86BE1 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ECMWindowController.xib; sourceTree = "<group>"; };
+		7DD0173C2564B56500C86BE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7DD0173E2564B56E00C86BE1 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7DD0173F2564B5AA00C86BE1 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/ECMWindowController.xib; sourceTree = "<group>"; };
+		7DD017402564B5AA00C86BE1 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7DD017412564B5CB00C86BE1 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "pt-PT"; path = "pt-PT.lproj/ECMWindowController.xib"; sourceTree = "<group>"; };
+		7DD017422564B5CB00C86BE1 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		7DD017432564B5E100C86BE1 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/ECMWindowController.xib; sourceTree = "<group>"; };
+		7DD017442564B5E200C86BE1 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7DD017452564B60400C86BE1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/ECMWindowController.xib; sourceTree = "<group>"; };
+		7DD017462564B60400C86BE1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7DD017472564B65100C86BE1 /* nl-BQ */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "nl-BQ"; path = "nl-BQ.lproj/ECMWindowController.xib"; sourceTree = "<group>"; };
+		7DD017482564B65100C86BE1 /* nl-BQ */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "nl-BQ"; path = "nl-BQ.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1353,7 +1367,7 @@
 				7DB39AE4254A42B700A8A3A3 /* TimeSettingModal */,
 				7D0100022547C681005EDCE1 /* ECMWindowController.h */,
 				7D0100032547C681005EDCE1 /* ECMWindowController.m */,
-				7D0100042547C681005EDCE1 /* ECMWindowController.xib */,
+				7DD017392564B29600C86BE1 /* ECMWindowController.xib */,
 			);
 			path = ECMWindow;
 			sourceTree = "<group>";
@@ -1388,6 +1402,7 @@
 				7DB390C525498B9600A8A3A3 /* MVMailBundle.h */,
 				7D4F4900254AE1BD00A22421 /* Constants.h */,
 				7D4F4901254AE21600A22421 /* Constants.m */,
+				7DD0173D2564B56500C86BE1 /* Localizable.strings */,
 			);
 			path = ECM;
 			sourceTree = "<group>";
@@ -2790,6 +2805,12 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				es,
+				"pt-PT",
+				it,
+				ru,
+				"nl-BQ",
 			);
 			mainGroup = 7D01FFE42547ACFA005EDCE1;
 			productRefGroup = 7D01FFEE2547ACFA005EDCE1 /* Products */;
@@ -2807,7 +2828,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D989F102558E72400E2CCBA /* Podfile in Resources */,
-				7D0100062547C681005EDCE1 /* ECMWindowController.xib in Resources */,
+				7DD0173B2564B56500C86BE1 /* Localizable.strings in Resources */,
+				7DD017372564B29600C86BE1 /* ECMWindowController.xib in Resources */,
 				7DB39AE9254A42F100A8A3A3 /* TimeSettingModalWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2832,11 +2854,43 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		7DD017392564B29600C86BE1 /* ECMWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DD017382564B29600C86BE1 /* en */,
+				7DD0173A2564B2AC00C86BE1 /* de */,
+				7DD0173F2564B5AA00C86BE1 /* es */,
+				7DD017412564B5CB00C86BE1 /* pt-PT */,
+				7DD017432564B5E100C86BE1 /* it */,
+				7DD017452564B60400C86BE1 /* ru */,
+				7DD017472564B65100C86BE1 /* nl-BQ */,
+			);
+			name = ECMWindowController.xib;
+			sourceTree = "<group>";
+		};
+		7DD0173D2564B56500C86BE1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7DD0173C2564B56500C86BE1 /* en */,
+				7DD0173E2564B56E00C86BE1 /* de */,
+				7DD017402564B5AA00C86BE1 /* es */,
+				7DD017422564B5CB00C86BE1 /* pt-PT */,
+				7DD017442564B5E200C86BE1 /* it */,
+				7DD017462564B60400C86BE1 /* ru */,
+				7DD017482564B65100C86BE1 /* nl-BQ */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		7D01FFF12547ACFB005EDCE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2898,6 +2952,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

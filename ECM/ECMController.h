@@ -14,8 +14,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ECMController : NSObject
 @property (strong, nonatomic) ECMWindowController *windowController;
++(void)backupLocaleDict;
++(NSDictionary*)initLocaleDictWithValue:(NSString*)val;
++(void)updateLocaleDictWithKey:(NSString*)key Value:(NSString*)val;
++(void)initializeUserDefaults;
 + (NSUserDefaults *) userDefaults;
++ (NSBundle *) bundle;
++ (NSString *)bundleIdentifier;
 + (void) showAlertWithTitle: (NSString *)title Message: (NSString *)msg;
++ (NSLocale *)currentLocale;
++ (NSString *)localeIdentifier;
++ (BOOL)isLocaleSupported;
++ (BOOL)isSpecificLocale;
+
++ (NSString *)localizedString:(NSString *)key;
++ (NSString *)localizedString:(NSString *)key localeIdentifier:(NSString *)identifier;
++(void)setLanguage:(NSString *)language;
++(NSString*)localizedStringForKey:(NSString *)key value:(NSString *)value;
++(NSString *)get:(NSString *)key alter:(NSString *)alternate;
 + (BOOL)isElCapitan;
 + (NSString *) extractEmailAddress:(NSString *)address;
 + (NSString *) selectRandomStringFromArray:(NSArray *)array;
