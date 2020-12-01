@@ -23,8 +23,8 @@
 "STRING_preview" = "Avance";
 "STRING_language" = "Idioma";
 "STRING_font" = "Fuente";
-"STRING_type" = "Tipo";
-"STRING_size" = "Talla";
+"STRING_font_name_size" = "Font Name and Size";
+"STRING_select_font_size" = "Select Font & Size";
 
 "STRING_custom" = "Hola";
 "STRING_random" = "Hola";

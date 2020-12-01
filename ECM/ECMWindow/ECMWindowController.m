@@ -25,6 +25,10 @@ NSString *localeIdentifier;
 
 - (void)windowDidLoad {
     [super windowDidLoad];
+    [label_font_name_size
+    setStringValue:[NSString stringWithFormat:@"%@ %@",
+                    GET_DEFAULT_VALUE(ECMHeaderFontName),
+                    GET_DEFAULT_VALUE(ECMHeaderFontSize)]];
     
     //------------- Locale start ----------------------------------------
     NSArray *localizations = [[ECMController bundle] localizations];
@@ -112,21 +116,43 @@ NSString *localeIdentifier;
     [label_preview setStringValue:[ECMController localizedString:@"STRING_preview" localeIdentifier:localeIdentifier]];
     [label_language setStringValue:[ECMController localizedString:@"STRING_language" localeIdentifier:localeIdentifier]];
     [label_font setStringValue:[ECMController localizedString:@"STRING_font" localeIdentifier:localeIdentifier]];
-    [label_type setStringValue:[ECMController localizedString:@"STRING_type" localeIdentifier:localeIdentifier]];
-    [label_size setStringValue:[ECMController localizedString:@"STRING_size" localeIdentifier:localeIdentifier]];
-    
+    [btn_select_font_size setTitle:[ECMController localizedString:@"STRING_select_font_size" localeIdentifier:localeIdentifier]];
+
     
     [btn_apply setTitle:[ECMController localizedString:@"STRING_apply" localeIdentifier:localeIdentifier]];
     [btn_close setTitle:[ECMController localizedString:@"STRING_close" localeIdentifier:localeIdentifier]];
 }
 - (void)languagePopUpSelectionChanged:(NSNotification *)notification {
     NSMenuItem *selectedItem = [popup_lang selectedItem];
-//    [ECMController showAlertWithTitle:@"" Message:[NSString stringWithFormat:@"%@", [selectedItem representedObject]]];
     SET_USER_DEFAULT([selectedItem representedObject], ECMLanguageCode);
     localeIdentifier = GET_DEFAULT(ECMLanguageCode);
     [self updateControls];
     [self updateValues];
 }
+- (void)changeFont:(id)sender {
+    NSFont *oldFont = label_font_name_size.font;
+    NSFont *font = [sender convertFont:oldFont];
+    NSString *fontSize = [NSString stringWithFormat: @"%.0f", font.pointSize];
+    
+    NSString *fontDescription = [NSString stringWithFormat: @"%@ %.0f", font.fontName, font.pointSize];
+    SET_USER_DEFAULT(font.fontName, ECMHeaderFontName);
+    SET_USER_DEFAULT(fontSize, ECMHeaderFontSize);
+    
+    [label_font_name_size setStringValue:fontDescription];
+    [text_preview setFont:font];
+}
+- (IBAction)selectFont:(id)sender {
+    NSString *font = GET_DEFAULT_VALUE(ECMHeaderFontName);
+    NSString *fontSize = GET_DEFAULT_VALUE(ECMHeaderFontSize);
+    
+    [[NSFontPanel sharedFontPanel] setDelegate:self];
+    [[NSFontPanel sharedFontPanel] setEnabled:YES];
+    [[NSFontPanel sharedFontPanel] makeKeyAndOrderFront:self];
+    
+    [[NSFontPanel sharedFontPanel]
+     setPanelFont:[NSFont fontWithName:font size:[fontSize floatValue]] isMultiple:NO];
+}
+
 - (void)updateValues {
     if ([ECMController.userDefaults objectForKey:key_custom_text] != nil) {
         NSDictionary* dict = [ECMController.userDefaults objectForKey:key_custom_text];
@@ -231,6 +257,10 @@ NSString *localeIdentifier;
         }
         
         [text_preview setStringValue:preview];
+        NSString *font = GET_DEFAULT_VALUE(ECMHeaderFontName);
+        NSString *fontSize = GET_DEFAULT_VALUE(ECMHeaderFontSize);
+        NSFont* nsFont = [NSFont fontWithName:font size:[fontSize floatValue]];
+        [text_preview setFont:nsFont];
     } else {
         [text_preview setStringValue:@""];
     }

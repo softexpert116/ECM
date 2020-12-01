@@ -23,8 +23,8 @@
 "STRING_preview" = "Предварительный просмотр";
 "STRING_language" = "Язык";
 "STRING_font" = "Шрифт";
-"STRING_type" = "Тип";
-"STRING_size" = "Размер";
+"STRING_font_name_size" = "Font Name and Size";
+"STRING_select_font_size" = "Select Font & Size";
 
 "STRING_custom" = "Здравствуйте";
 "STRING_random" = "Здравствуйте";

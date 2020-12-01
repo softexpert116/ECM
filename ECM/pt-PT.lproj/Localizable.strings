@@ -23,8 +23,8 @@
 "STRING_preview" = "Antevisão";
 "STRING_language" = "Língua";
 "STRING_font" = "Fonte";
-"STRING_type" = "Tipo";
-"STRING_size" = "Tamanho";
+"STRING_font_name_size" = "Font Name and Size";
+"STRING_select_font_size" = "Select Font & Size";
 
 "STRING_custom" = "Olá";
 "STRING_random" = "Olá";

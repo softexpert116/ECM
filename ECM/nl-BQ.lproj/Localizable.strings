@@ -23,8 +23,8 @@
 "STRING_preview" = "Voorbeeld";
 "STRING_language" = "Taal";
 "STRING_font" = "Lettertype";
-"STRING_type" = "Type";
-"STRING_size" = "Grootte";
+"STRING_font_name_size" = "Font Name and Size";
+"STRING_select_font_size" = "Select Font & Size";
 
 "STRING_custom" = "Hallo";
 "STRING_random" = "Hallo";

@@ -10,6 +10,7 @@ extern int  LoggingLevel;
 #define GET_DEFAULT(k) [[NSUserDefaults standardUserDefaults] objectForKey: k]
 #define SET_USER_DEFAULT(o,k) [[NSUserDefaults standardUserDefaults] setObject: o forKey: k]
 #define ECMLocaleIdentifier [ECMController localeIdentifier]
+#define GET_DEFAULT_VALUE(k) [[NSUserDefaults standardUserDefaults] valueForKey: k]
 //#define MHLocalizedString(k) [MailHeader localizedString: k]
 #define ECMLocalizedStringByLocale(k,l) [ECMController localizedString: k localeIdentifier: l]
 

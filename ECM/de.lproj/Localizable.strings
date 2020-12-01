@@ -23,8 +23,8 @@
 "STRING_preview" = "Vorschau";
 "STRING_language" = "Sprache";
 "STRING_font" = "Schriftart";
-"STRING_type" = "Art";
-"STRING_size" = "Größe";
+"STRING_font_name_size" = "Font Name and Size";
+"STRING_select_font_size" = "Select Font & Size";
 
 "STRING_custom" = "Hallo";
 "STRING_random" = "Hallo";

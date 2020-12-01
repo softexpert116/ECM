@@ -11,6 +11,10 @@
 #define ECMLanguageCode @"ECMLanguageCode"
 #define ECMBundleIdentifier @"ECMBundleIdentifier"
 #define ECMBundleShortVersionKey @"CFBundleShortVersionString"
+#define ECMDefaultHeaderFontName @"Helvetica"
+#define ECMDefaultHeaderFontSize @"13"
+#define ECMHeaderFontName @"ECMHeaderFontName"
+#define ECMHeaderFontSize @"ECMHeaderFontSize"
 
 FOUNDATION_EXPORT NSString *const key_time_text1;
 FOUNDATION_EXPORT NSString *const key_time_val11;

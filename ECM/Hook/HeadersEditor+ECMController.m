@@ -184,7 +184,11 @@ id document;
 
 }
 -(void)setECMReply {
-    NSString* replyStr = @"<p>";
+    NSString *font = GET_DEFAULT_VALUE(ECMHeaderFontName);
+    NSString *fontSize = GET_DEFAULT_VALUE(ECMHeaderFontSize);
+    
+    NSString* replyStr = [NSString stringWithFormat:@"<p style='font-size:%@px; font-family:%@;'>", fontSize, font];
+    
     NSString* mr = [ECMController localizedString:@"STRING_mr" localeIdentifier:GET_DEFAULT(ECMLanguageCode)];
     NSString* mrs = [ECMController localizedString:@"STRING_mrs" localeIdentifier:GET_DEFAULT(ECMLanguageCode)];
 

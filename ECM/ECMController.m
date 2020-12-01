@@ -34,8 +34,8 @@ static NSBundle *bundle = nil;
     
     [self sharedInstance];
     userDefaults = [NSUserDefaults standardUserDefaults];
-    [self initializeUserDefaults];
-//    [self backupLocaleDict];
+//    [self initializeUserDefaults];
+    [self backupLocaleDict];
     [[((MVMailBundle *)self) class] registerBundle];
 }
 +(void)backupLocaleDict {
@@ -316,9 +316,9 @@ static NSBundle *bundle = nil;
     [openItem setTarget:self];
     [subMenu addItem:openItem];
 
-    NSMenuItem *closeItem = [[NSMenuItem alloc] initWithTitle:@"Close" action:nil keyEquivalent:@""];
-    [closeItem setEnabled:YES];
-    [subMenu addItem:closeItem];
+//    NSMenuItem *closeItem = [[NSMenuItem alloc] initWithTitle:@"Close" action:nil keyEquivalent:@""];
+//    [closeItem setEnabled:YES];
+//    [subMenu addItem:closeItem];
 
     [theMenu setSubmenu:subMenu forItem:subGroup];
 }

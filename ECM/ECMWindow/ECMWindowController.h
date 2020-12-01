@@ -29,13 +29,13 @@ NS_ASSUME_NONNULL_BEGIN
     __weak IBOutlet NSTextField *label_changing;
     __weak IBOutlet NSTextField *label_font;
     
-    __weak IBOutlet NSTextField *label_size;
-    __weak IBOutlet NSTextField *label_type;
     __weak IBOutlet NSTextField *label_preview;
     
+    __weak IBOutlet NSTextField *label_font_name_size;
     __weak IBOutlet NSPopUpButton *popup_lang;
     __weak IBOutlet NSButton *btn_apply;
     __weak IBOutlet NSButton *btn_close;
+    __weak IBOutlet NSButton *btn_select_font_size;
 }
 
 @end

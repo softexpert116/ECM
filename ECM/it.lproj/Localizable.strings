@@ -23,8 +23,8 @@
 "STRING_preview" = "Anteprima";
 "STRING_language" = "Linguaggio";
 "STRING_font" = "Font";
-"STRING_type" = "Genere";
-"STRING_size" = "Taglia";
+"STRING_font_name_size" = "Font Name and Size";
+"STRING_select_font_size" = "Select Font & Size";
 
 "STRING_custom" = "Ciao";
 "STRING_random" = "Ciao";
